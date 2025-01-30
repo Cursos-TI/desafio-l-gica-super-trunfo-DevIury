@@ -8,10 +8,11 @@
 int main() {
     // Definição das variáveis para armazenar as propriedades das cidades
     // Você pode utilizar o código do primeiro desafio
-    int codigo, pontos, codigo2, pontos2;
+    int codigo, pontos, pontos2;
     char cidade[50], cidade2[50];
     float povo, area, povo2, area2;
     double PIB, PIB2;
+    int soma1, soma2,soma3;
 
     printf("Digite o nome da cidade: \n");
     scanf("%s", &cidade);
@@ -35,7 +36,7 @@ int main() {
     scanf("%s", &cidade2);
 
     printf("Digite o código da cidade: \n");
-    scanf("%d", &codigo2);
+    scanf("%d", &codigo);
 
     printf("Digite a população: \n");
     scanf("%f", &povo2);
@@ -51,33 +52,60 @@ int main() {
     
 
     if(povo > povo2){
-        printf("Cidade 1 tem maior população que cidade 2!");
-    }else{
-        printf("Cidade 2 tem maior população que a cidade 1!");
+        printf("Cidade 1 tem maior população que cidade 2!\n");
+        soma1 +=1;
+    }
+    if(povo == povo2){
+        printf("As cidades têm a mesma população!\n");
+        soma3+=1;
+    }
+    else{
+        printf("Cidade 2 tem maior população que a cidade 1!\n");
+        soma2+=1;
     }
 
     if(pontos > pontos2){
-        
+        printf("A cidade 1 tem mais pontos turísticos que a cidade 2!\n");
+        soma1+=1;
+    }
+    if(pontos == pontos2){
+        printf("As cidades têm a mesma quantidade de pontos turísticos!\n");
+        soma3 +=1;
+    }else{
+        printf("A cidade 2 tem mais pontos turísticos!\n");
+        soma2+=1;
+    }
+
+    if(area > area2){
+        printf("A cidade 1 tem uma área maior que a cidade 2!\n");
+        soma1+=1;
+    }if(area == area2){
+        printf("As cidades têm a mesma área!\n");
+        soma3 +=1;
+    }else{
+        printf("A cidade 2 tem uma área maior que a cidade 1!\n");
+        soma2+=1;
+    }
+
+    if(PIB > PIB2){
+        printf("A cidade 1 tem o PIB maior do que a cidade 2!\n");
+        soma1+=1;
+    }if(PIB == PIB2){
+        printf("O PIB das cidades são iguais!\n");
+        soma3+=1;
+    }else{
+        printf("O PIB da cidade 2 é maior do que a da cidade 1!\n");
+        soma2+=1;
     }
     
-    
-    // Comparação de Cartas:
-    // Desenvolva a lógica de comparação entre duas cartas.
-    // Utilize estruturas de decisão como if, if-else para comparar atributos como população, área, PIB, etc.
-
-    // Exemplo:
-    // if (populacaoA > populacaoB) {
-    //     printf("Cidade 1 tem maior população.\n");
-    // } else {
-    //     printf("Cidade 2 tem maior população.\n");
-    // }
-
-    // Exibição dos Resultados:
-    // Após realizar as comparações, exiba os resultados para o usuário.
-    // Certifique-se de que o sistema mostre claramente qual carta venceu e com base em qual atributo.
-
-    // Exemplo:
-    // printf("A cidade vencedora é: %s\n", cidadeVencedora);
+    if(soma1 > soma2){
+        printf("A cidade 1 é considerada vencedora, pois possui maiores qualificações nos atributos!\n");
+    }if(soma3 > soma1, soma2){
+        printf("As cidades têm a mesma quantidade de qualificações!\n");
+        soma3 +=1;
+    }else{
+        printf("A cidade 2 é considerada vencedora, pois possui maiores qualificações nos atributos!\n");
+    }
 
     return 0;
 }
